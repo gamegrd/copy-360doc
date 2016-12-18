@@ -1,0 +1,24 @@
+{  
+  "name": "360doc复制插件",  
+  "version": "1.0.3",  
+  "manifest_version":2,
+  "description": "360doc不用登陆也能复制啦!",  
+   "icons": 
+  { 
+
+    "48": "48.png",
+    "512": "512.png"
+  },  
+   "permissions": [
+        "tabs"
+        
+    ],
+    "web_accessible_resources": [ "script/copy.js"],
+    "content_scripts": [
+    {
+      "matches": ["http://www.360doc.com/*"],
+      "js": [ "script/copy.js"],
+      "run_at": "document_end"
+    }
+  ]
+} 
